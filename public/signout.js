@@ -12,14 +12,12 @@ const firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  //get elements
-  const btnLogout = document.getElementById("btnLogout");
-
+  const btnLogout = document.getElementById('btnLogout')
   btnLogout.addEventListener('click', e =>{
-      const auth = firebase.auth();
-      auth.signOut().then(function() {
-        window.location.href = "index.html"
-      }).catch(function(error) {
-        console.log(error);
-      });
+    const auth = firebase.auth()
+    auth.signOut().then(function() {
+      window.location.href = "index.html"
+    }).catch(function(error) {
+      // An error happened.
+    });
   })
